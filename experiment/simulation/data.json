@@ -1,5 +1,6 @@
 {
     "data" : {
+        "num_stages" : 3,
         "story" : [
             {
                 "type" : "question",
@@ -31,6 +32,86 @@
                     }
                 ],
                 "answer" : "correct",
+                "answerText" : [
+                    {
+                        "id" : 1,
+                        "text" : "Answer 1"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Answer 2"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Answer 3"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Answer 4"
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Answer 5"
+                    }
+                ],
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "Response 1",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Response 2",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Response 3",
+                        "marks" : 3
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Response 4",
+                        "marks" : 4
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Response 5",
+                        "marks" : 5
+                    }
+                ]
+            },
+            {
+                "type" : "question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Question 1",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Question 2",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Question 3",
+                        "marks" : 3
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Question 4",
+                        "marks" : 4
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Question 5",
+                        "marks" : 5
+                    }
+                ],
+                "answer" : "incorrect",
                 "answerText" : [
                     {
                         "id" : 1,

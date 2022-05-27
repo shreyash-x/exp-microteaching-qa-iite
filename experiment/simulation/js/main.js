@@ -10,13 +10,22 @@ fetch('./data.json')
 
 window.currentScene = 0;
 
-window.marks = 0;
+let marks = 0;
+let num_stages = 0;
+const stagewiseMarks = [];
+
 
 
 const init = (data) => {
+    num_stages = data.data.num_stages;
     info = data.data.story;
     const story = data.data.story;
     // console.log(story);
+
+    createTimeline(num_stages);
+    for (let i = 0; i < num_stages; i++) {
+        stagewiseMarks.push(0);
+    }
 
     const scene = story[window.currentScene];
     if (scene.type === 'question') {
@@ -38,10 +47,20 @@ const renderQuestion = (scene) => {
 
     // make all students sit down
     allStudentsSitDown();
+    // const progressBar = document.getElementById('progress-bar');
+    // progressBar.innerHTML = `Scene ${window.currentScene + 1}`;
+}
 
-    // show stage
-    const progressBar = document.getElementById('progress-bar');
-    progressBar.innerHTML = `Scene ${window.currentScene + 1}`;
+
+const showStage = () => {
+    const stage = document.getElementById(`stage-${window.currentScene}`);
+    const children = stage.children;
+    for (let i = 0; i < children.length; i++) {
+        const child = children[i];
+        if (!child.classList.contains('is-filled')) {
+            child.classList.add('is-filled');
+        }
+    }
 }
 
 
@@ -62,7 +81,7 @@ const evaluateOption = (text, options) => {
 
     for (let i = 0; i < options.length; i++) {
         if (options[i].text === text) {
-            window.marks += options[i].marks;
+            marks += options[i].marks;
             break;
         }
     }
@@ -148,7 +167,8 @@ const selectResponse = (event) => {
     allStudentsSitDown();
     setTimeout(() => {
         clearDialogCloud();
-        nextScene();
+        window.currentScene++;
+        nextScene(window.currentScene);
     }, 2000);
 }
 
@@ -160,18 +180,33 @@ const clearDialogCloud = () => {
 }
 
 
-const nextScene = () => {
-    window.currentScene++;
-    if (window.currentScene < info.length) {
-        const scene = info[window.currentScene];
+const nextScene = (stage) => {
+    stagewiseMarks[stage-1] = marks;
+    marks = 0;
+    moveToStage(stage);
+}
+
+const moveToStage = (stage) => {
+    if (window.currentScene !== 0) {
+        showStage();
+    }
+    if (stage < info.length) {
+        const scene = info[stage];
+        // show stage
         if (scene.type === 'question') {
             renderQuestion(scene);
         }
     }
     else {
-        document.getElementById('teachers-box').innerHTML = `<div class="message-box arrow-bottom">You have completed the quiz. Your score is ${window.marks}</div>`;
+        let finalMarks = 0;
+        stagewiseMarks.forEach(mark => {
+            finalMarks += mark;
+        });
+        console.log(stagewiseMarks);
+        document.getElementById('teachers-box').innerHTML = `<div class="message-box arrow-bottom">You have completed the quiz. Your score is ${finalMarks}</div>`;
     }
 }
+
 
 window.selectResponse = selectResponse;
 window.selectOption = selectOption;

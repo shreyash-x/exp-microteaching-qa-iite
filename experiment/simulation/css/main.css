@@ -1,131 +1,165 @@
 .scene {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #d9d9d9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.seats {
+  padding: 2% 7%;
+}
+
+.student {
+  width: 150px;
+  height: 170px;
+}
+
+.is-sitting {
+  background: url("../images/student-sitting.png") no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.is-raising-hand {
+  background: url("../images/student-raising-hand.png") no-repeat;
+  background-size: 110%;
+  background-position: center;
+}
+
+.is-raising-hand:hover {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #5f9a80;
+  padding: 2% 7%;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  width: 170px;
+  background-color: #eff9ff;
+  border-radius: 7%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.option-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 29px 38px,
+    rgba(0, 0, 0, 0.22) 0px 25px 12px;
+}
+
+.message-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 150px;
+  background-color: #eff9ff;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.message-box.arrow-bottom:after {
+  content: " ";
+  position: absolute;
+  left: 7px;
+  bottom: -25px;
+  border-top: 30px solid #eff9ff;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  border-bottom: none;
+}
+
+.box {
+  width: 15%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.box.arrow-right:after {
+  content: " ";
+  position: absolute;
+  right: -20px;
+  top: 20%;
+  border-top: 12px solid transparent;
+  border-right: none;
+  border-left: 30px solid #fff;
+  border-bottom: 12px solid transparent;
+}
+
+.box.arrow-left:after {
+  content: " ";
+  position: absolute;
+  left: -20px;
+  top: 20%;
+  border-top: 12px solid transparent;
+  border-right: 30px solid #fff;
+  border-left: none;
+  border-bottom: 12px solid transparent;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
   }
-  
-  .seats {
-    padding: 2% 7%;
+  100% {
+    opacity: 1;
   }
-  
-  .student {
-    width: 150px;
-    height: 170px;
-  }
-  
-  .is-sitting {
-    background: url("../images/student-sitting.png") no-repeat;
-    background-size: 100%;
-    background-position: center;
-  }
-  
-  .is-raising-hand {
-    background: url("../images/student-raising-hand.png") no-repeat;
-    background-size: 110%;
-    background-position: center;
-  }
-  
-  .is-raising-hand:hover {
-    cursor: pointer;
-  }
-  
-  .menu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    background-color: #5f9a80;
-    padding: 2% 7%;
-  }
-  
-  .option-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 170px;
-    width: 170px;
-    background-color: #eff9ff;
-    border-radius: 7%;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  
-  .option-card:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 29px 38px,
-      rgba(0, 0, 0, 0.22) 0px 25px 12px;
-  }
-  
-  .message-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 150px;
-    background-color: #eff9ff;
-    position: relative;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-  
-  .message-box.arrow-bottom:after {
-    content: " ";
-    position: absolute;
-    left: 7px;
-    bottom: -25px;
-    border-top: 30px solid #eff9ff;
-    border-right: 12px solid transparent;
-    border-left: 12px solid transparent;
-    border-bottom: none;
-  }
-  
-  .box {
-    width: 15%;
-    height: auto;
-    background-color: #fff;
-    padding: 20px;
-    position: relative;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-      rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-  
-  .box.arrow-right:after {
-    content: " ";
-    position: absolute;
-    right: -20px;
-    top: 20%;
-    border-top: 12px solid transparent;
-    border-right: none;
-    border-left: 30px solid #fff;
-    border-bottom: 12px solid transparent;
-  }
-  
-  .box.arrow-left:after {
-    content: " ";
-    position: absolute;
-    left: -20px;
-    top: 20%;
-    border-top: 12px solid transparent;
-    border-right: 30px solid #fff;
-    border-left: none;
-    border-bottom: 12px solid transparent;
-  }
-  
-  @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-  }
+}
+
+.timeline-stage {
+  width: 35px;
+  height: 35px;
+  font-size: 0.8rem;
+  padding-top: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #D9F0E4;
+}
+
+.progress-bar-line {
+  width: 80%;
+  height: 3px;
+  position: relative;
+  background-color: #D9F0E4;
+}
+
+
+.is-filled {
+  background-color: #4CC87F;
+  border-color: #4CC87F;
+  color: #fff;
+}
+
+.stage {
+  width: 10%;
+}
+
+.final-stage {
+  width: 2.3%;
+}
