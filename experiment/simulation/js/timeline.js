@@ -20,6 +20,10 @@ const createTimeline = (num_stages) => {
 
 const handleStages = () => {
     const stages = document.getElementsByClassName('stage');
+    let el = stages[0].getElementsByClassName('timeline-stage')[0];
+    if (!el.classList.contains('is-in-progress')) {
+        el.classList.add('is-in-progress');
+    }
     for (let i = 0; i < stages.length; i++) {
         stages[i].style.cursor = 'pointer';
         stages[i].addEventListener('click', () => {
@@ -32,6 +36,9 @@ const handleStages = () => {
                     if (!child.classList.contains('is-filled')) {
                         child.classList.add('is-filled');
                     }
+                    if(child.classList.contains('is-in-progress')) {
+                        child.classList.remove('is-in-progress');
+                    }
                 }
             }
             // make all stages from i white
@@ -43,8 +50,17 @@ const handleStages = () => {
                     if (child.classList.contains('is-filled')) {
                         child.classList.remove('is-filled');
                     }
+                    if(child.classList.contains('is-in-progress')) {
+                        child.classList.remove('is-in-progress');
+                    }
                 }
             }
+            let el = stages[i].getElementsByClassName('timeline-stage')[0];
+            if (!el.classList.contains('is-in-progress')) {
+                el.classList.add('is-in-progress');
+            }
+
+
             window.currentScene = i;
             moveToStage(i);
         });

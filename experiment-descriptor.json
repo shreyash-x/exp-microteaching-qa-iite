@@ -1,0 +1,32 @@
+{
+    "unit-type": "lu",
+    "label": "",
+    "basedir": ".",
+    "units": [
+      {
+        "unit-type": "aim"
+      },
+      {
+        "target": "procedure.html",
+        "source": "procedure.md",
+        "label": "Procedure",
+        "unit-type": "task",
+        "content-type": "text"
+      },
+      {
+        "unit-type": "task",
+        "label": "Pretest",
+        "content-type": "assesment",
+        "source": "pretest.json",
+        "target": "pretest.html"
+      },
+      {
+        "target": "simulation.html",
+        "source": "simulation/index.html",
+        "label": "Simulation",
+        "unit-type": "task",
+        "content-type": "simulation"
+      }
+    ]
+  }
+  

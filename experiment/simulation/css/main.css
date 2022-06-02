@@ -156,6 +156,10 @@
   color: #fff;
 }
 
+.is-in-progress {
+  border-color: #4CC87F;
+}
+
 .stage {
   width: 10%;
 }
