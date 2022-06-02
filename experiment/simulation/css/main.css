@@ -1,3 +1,18 @@
+/* disabling text selection */
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+text {
+  pointer-events:none;
+}
+
 .scene {
   width: 100%;
   height: 100%;
@@ -151,13 +166,14 @@
 
 
 .is-filled {
-  background-color: #4CC87F;
-  border-color: #4CC87F;
+  background-color: #97d23d;
+  border-color: #97d23d;
   color: #fff;
 }
 
 .is-in-progress {
-  border-color: #4CC87F;
+  border-color: #97d23d;
+  background-color: #fff;
 }
 
 .stage {
@@ -166,4 +182,17 @@
 
 .final-stage {
   width: 2.3%;
+}
+
+.next-stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px 7px;
+  background-color: #97d23d;
+  color: #fff;
+}
+
+.next-stage:hover {
+  background-color: #7fb134;
 }

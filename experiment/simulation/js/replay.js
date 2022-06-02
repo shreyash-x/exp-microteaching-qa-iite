@@ -1,17 +1,7 @@
 let info;
-let replayJSON;
+let replay;
 
-// click on next button to move to next stage when waiting for click
-const nextButton = document.getElementById('next-button');
-nextButton.addEventListener('click', () => {
-        nextScene();
-        nextButton.setAttribute('hidden', 'hidden');
-});
-
-
-
-
-fetch('./data.json')
+fetch('./replay.json')
     .then(response => response.json())
     .then(data => {
         init(data);
@@ -28,31 +18,75 @@ const stagewiseMarks = [];
 
 
 const init = (data) => {
-    replayJSON = data;
     num_stages = data.data.num_stages;
     info = data.data.story;
     const story = data.data.story;
     // console.log(story);
 
     createTimeline(num_stages);
-    handleStages();
     for (let i = 0; i < num_stages; i++) {
         stagewiseMarks.push(0);
     }
 
-    const scene = story[window.currentScene];
-    if (scene.type === 'question') {
-        renderQuestion(scene);
-    }
+    // const scene = story[window.currentScene];
+    replay = makeReplay();
+    runReplay();
 
 }
 
+const makeReplay = () => {
+    let replay = [];
+    const story = info;
+    for(let i = 0; i < story.length; i++) {
+        if(story[i].type === 'question') {
+            replay.push(renderQuestion,selectOption,askAnswer,showResponses,selectResponse,nextScene);
+        }
+    }
 
-const renderQuestion = (scene) => {
+    return replay;
+
+}
+
+window.replaystage = 0;
+const runReplay = () => {
+    if (window.currentScene !== 0) {
+        showStage();
+    }
+    console.log(replay);
+    if(window.currentScene < info.length) {
+        replay[window.replaystage]();
+    }
+    else {
+        let finalMarks = 0;
+        stagewiseMarks.forEach(mark => {
+            finalMarks += mark;
+        });
+        console.log(stagewiseMarks);
+        document.getElementById('teachers-box').innerHTML = `<div class="message-box arrow-bottom">You have completed the quiz. Your score is ${finalMarks}</div>`;
+        
+        const nextButton = document.getElementById('next-button');
+        // delete next button
+        nextButton.remove();
+
+    }
+    window.replaystage++;
+}
+
+document.getElementById('next-button').addEventListener('click', () => {
+    runReplay();
+});
+
+    
+    
+
+
+const renderQuestion = () => {
+    setCurrentStage(window.currentScene);
+    const scene = info[window.currentScene];
     const teachersBox = document.getElementById('teachers-box');
     teachersBox.innerHTML = '';
     scene.options.forEach(option => {
-        const question = `<div id="option-${option.id}" class="option-card" onclick="selectOption(event)">${option.text}</div>`;
+        const question = `<div id="option-${option.id}" class="option-card">${option.text}</div>`;
         teachersBox.innerHTML += question;
         // console.log(el);
     });
@@ -67,6 +101,7 @@ const renderQuestion = (scene) => {
 
 const showStage = () => {
     const stage = document.getElementById(`stage-${window.currentScene}`);
+    console.log(stage);
     const children = stage.children;
     for (let i = 0; i < children.length; i++) {
         const child = children[i];
@@ -79,17 +114,22 @@ const showStage = () => {
     }
 }
 
+const setCurrentStage = (stage) => {
+    const el = document.getElementById(`stage-${stage+1}`).getElementsByClassName('timeline-stage')[0];
+    if(!el.classList.contains('is-in-progress')) {
+        el.classList.add('is-in-progress');
+    }
+} 
 
-const selectOption = (event) => {
+
+const selectOption = () => {
     const scene = info[window.currentScene];
-    const text = event.target.innerHTML;
-    const id = parseInt(event.target.id.split('-')[1],10);
-    replayJSON.data.story[window.currentScene].option_selected = id;
+    const id = scene.option_selected;
+    const text = document.getElementById(`option-${id}`).innerHTML;
     const messageBox = `<div class="message-box arrow-bottom">${text}</div>`
     const teachersBox = document.getElementById('teachers-box');
     teachersBox.innerHTML = messageBox;
     evaluateOption(id, scene.options);
-    askAnswer(id, scene);
 }
 
 
@@ -107,7 +147,10 @@ const evaluateOption = (id, options) => {
 }
 
 
-const askAnswer = (id, scene) => {
+const askAnswer = () => {
+    console.log('ask answer');
+    const scene = info[window.currentScene];
+    const id = scene.option_selected;
     const students = document.getElementsByClassName('student');
     // select random student
     const random = Math.floor(Math.random() * students.length);
@@ -116,24 +159,21 @@ const askAnswer = (id, scene) => {
     const answerText = scene.answerText;
     let answer = "aa";
     for (let i = 0; i < answerText.length; i++) {
-        if (id === answerText[i].id) {
+        if (id == answerText[i].id) {
             answer = answerText[i].text;
             break;
         }
 
     }
-    student.onclick = () => {
-        console.log(answer);
-        // get coordinates of top right corner of student
-        const studentCoords = student.getBoundingClientRect();
-        const top = studentCoords.top;
-        const left = studentCoords.left;
-        const width = studentCoords.width;
-        console.log(studentCoords);
-        insertDialogCloud(answer, left, top, student.id, width);
-        // allStudentsSitDown();
-        showResponses(scene);
-    }
+
+    // get coordinates of top right corner of student
+    const studentCoords = student.getBoundingClientRect();
+    const top = studentCoords.top;
+    const left = studentCoords.left;
+    const width = studentCoords.width;
+    insertDialogCloud(answer, left, top, student.id, width);
+    // allStudentsSitDown();
+
 }
 
 const insertDialogCloud = (text, left, top, id, width) => {
@@ -164,27 +204,26 @@ const allStudentsSitDown = () => {
     }
 }
 
-const showResponses = (scene) => {
+const showResponses = () => {
+    const scene = info[window.currentScene];
     const teachersBox = document.getElementById('teachers-box');
     teachersBox.innerHTML = '';
     scene.responses.forEach(response => {
-        const question = `<div id="option-${response.id}" class="option-card" onclick="selectResponse(event)">${response.text}</div>`;
+        const question = `<div id="option-${response.id}" class="option-card">${response.text}</div>`;
         teachersBox.innerHTML += question;
         // console.log(el);
     });
 }
 
-const selectResponse = (event) => {
+const selectResponse = () => {
     const scene = info[window.currentScene];
-    const id = parseInt(event.target.id.split('-')[1],10);
-    replayJSON.data.story[window.currentScene].response_selected = id;
-    const text = event.target.innerHTML;
+    const id = scene.response_selected;
+    const text = document.getElementById(`option-${id}`).innerHTML;
     const messageBox = `<div class="message-box arrow-bottom">${text}</div>`
     const teachersBox = document.getElementById('teachers-box');
     teachersBox.innerHTML = messageBox;
     evaluateOption(id, scene.responses);
     allStudentsSitDown();
-    nextButton.removeAttribute('hidden');
 }
 
 const clearDialogCloud = () => {
@@ -200,52 +239,12 @@ const nextScene = () => {
     window.currentScene++;
     stagewiseMarks[window.currentScene - 1] = marks;
     marks = 0;
-    moveToStage(window.currentScene);
 }
-
-const setCurrentStage = (stage) => {
-    const el = document.getElementById(`stage-${stage+1}`).getElementsByClassName('timeline-stage')[0];
-    if(!el.classList.contains('is-in-progress')) {
-        el.classList.add('is-in-progress');
-    }
-}
-    
 
 const moveToStage = (stage) => {
-    if (window.currentScene !== 0) {
-        showStage();
-    }
-    if (stage < info.length) {
-        const scene = info[stage];
-        setCurrentStage(stage);
-        // show stage
-        if (scene.type === 'question') {
-            renderQuestion(scene);
-        }
-    }
-    else {
-        let finalMarks = 0;
-        stagewiseMarks.forEach(mark => {
-            finalMarks += mark;
-        });
-        console.log(stagewiseMarks);
-        document.getElementById('teachers-box').innerHTML = `<div class="message-box arrow-bottom">You have completed the quiz. Your score is ${finalMarks}</div>`;
-        downloadObjectAsJson(replayJSON, 'replay');
-    }
+    
 }
 
 
 window.selectResponse = selectResponse;
 window.selectOption = selectOption;
-
-
-
-function downloadObjectAsJson(exportObj, exportName){
-    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
-    var downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href",     dataStr);
-    downloadAnchorNode.setAttribute("download", exportName + ".json");
-    document.body.appendChild(downloadAnchorNode); // required for firefox
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
-  }

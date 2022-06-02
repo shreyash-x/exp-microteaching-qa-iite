@@ -13,8 +13,6 @@ const createTimeline = (num_stages) => {
                         <div class="timeline-stage has-text-centered mt-2">S${num_stages}</div>
                     </div>`
     progressBar.innerHTML += element;
-    handleStages();
-
 }
 
 
