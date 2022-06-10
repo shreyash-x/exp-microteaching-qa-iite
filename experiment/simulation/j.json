@@ -1,0 +1,180 @@
+{
+    "type" : "exposition",
+    "options" : [
+        {
+            "id" : 1,
+            "text" : "Explanation 1",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Explanation 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Explanation 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Explanation 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Explanation 5",
+            "marks" : 5
+        }
+    ],
+    "studentResponse" : "Students response to the exposition goes here (if any).",
+    "teacherResponses" : [
+        {
+            "id" : 1,
+            "text" : "Teacher's reply/ clarification to the students response goes here (if any).",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Response 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Response 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Response 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Response 5",
+            "marks" : 5
+        }
+    ]
+},
+{
+    "type" : "exposition",
+    "options" : [
+        {
+            "id" : 1,
+            "text" : "Explanation 1",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Explanation 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Explanation 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Explanation 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Explanation 5",
+            "marks" : 5
+        }
+    ],
+    "studentResponse" : "Students response to the exposition goes here (if any).",
+    "teacherResponses" : [
+        {
+            "id" : 1,
+            "text" : "Teacher's reply/ clarification to the students response goes here (if any).",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Response 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Response 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Response 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Response 5",
+            "marks" : 5
+        }
+    ]
+},
+
+{
+    "type" : "question",
+    "options" : [
+        {
+            "id" : 1,
+            "text" : "Question 1",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Question 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Question 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Question 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Question 5",
+            "marks" : 5
+        }
+    ],
+    "answer" : "correct",
+    "answerText" : "Answer to the question goes here.",
+    "responses" : [
+        {
+            "id" : 1,
+            "text" : "Response 1",
+            "marks" : 1
+        },
+        {
+            "id" : 2,
+            "text" : "Response 2",
+            "marks" : 2
+        },
+        {
+            "id" : 3,
+            "text" : "Response 3",
+            "marks" : 3
+        },
+        {
+            "id" : 4,
+            "text" : "Response 4",
+            "marks" : 4
+        },
+        {
+            "id" : 5,
+            "text" : "Response 5",
+            "marks" : 5
+        }
+    ]
+}
+
+
+]
+}

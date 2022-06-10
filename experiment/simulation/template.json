@@ -74,7 +74,7 @@
                 ]
             },
             {
-                "type" : "teacher-dialog",
+                "type" : "teacher-dialogue",
                 "text" : "When a ball is rolling, after some time you will observe that the speed of the football on the ground decreases slowly as it moves forward and it eventually stops at some point."
             },
             {
@@ -264,7 +264,7 @@
                 ]
             },
             {
-                "type" : "teacher-dialog",
+                "type" : "teacher-dialogue",
                 "text" : "We can say that some action is always required to perform work."
             },
             {
@@ -299,7 +299,7 @@
                 ]
             },
             {
-                "type" : "teacher-dialog",
+                "type" : "teacher-dialogue",
                 "text" : "In order to move an object which isn't moving, it is necessary to apply an action on it. For objects which are already moving, we can apply action in order to change their speed and direction as well as stop them. The object can be anything, a book,ball,door,bench,etc."
             },
             {
