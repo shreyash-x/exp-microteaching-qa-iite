@@ -1,3 +1,6 @@
+// Needs to be refined and fixed.
+// Will work on this once done with adding all scenes.
+
 let info;
 let replay;
 

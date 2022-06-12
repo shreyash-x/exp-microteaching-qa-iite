@@ -300,7 +300,7 @@
             },
             {
                 "type" : "teacher-dialog",
-                "text" : "In order to move an object which isn't moving, it is necessary to apply an action on it. For objects which are already moving, we can apply action in order to change their speed and direction as well as stop them. The object can be anything, a book,ball,door,bench,etc."
+                "text" : "In order to move an object which isn't moving, it is necessary to apply an action on it. For objects which are already moving, we can apply action in order to change their speed and direction as well as stop them. The object can be anything, a book, ball, door, bench, etc."
             },
             {
                 "type" : "lesson-question",
