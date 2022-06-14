@@ -8,7 +8,7 @@ let replayJSON;
 let num_stages = 0;
 
 // load data
-fetch('./data.json')
+fetch('./extra1.json')
     .then(response => response.json())
     .then(data => {
         init(data);

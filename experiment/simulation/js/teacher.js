@@ -9,10 +9,10 @@ const selectOption = (event) => {
     const scene = info[window.currentScene];
     const text = event.target.innerHTML;
     const id = parseInt(event.target.id.split('-')[1], 10);
-    replayJSON.data.story[window.currentScene].option_selected = id;
+    //replayJSON.data.story[window.currentScene].option_selected = id;
     addMessageBox(text);
     evaluateOption(id, scene.options);
-    askAnswerSingle(id, scene);
+    askAnswerSingle(scene);
 }
 
 // 2. Select a response from teachers box
@@ -20,7 +20,7 @@ const selectResponse = (event) => {
     const scene = info[window.currentScene];
     const text = event.target.innerHTML;
     const id = parseInt(event.target.id.split('-')[1], 10);
-    replayJSON.data.story[window.currentScene].response_selected = id;
+    //replayJSON.data.story[window.currentScene].response_selected = id;
     addMessageBox(text);
     evaluateOption(id, scene.responses);
     allStudentsSitDown();

@@ -75,25 +75,17 @@ export const askAnswerMultiple = (scene) => {
 }
 
 // 6. Ask a single student for answer
-export const askAnswerSingle = (id, scene) => {
+export const askAnswerSingle = (scene) => {
     const students = document.getElementsByClassName('student');
     // select random student
     const random = Math.floor(Math.random() * students.length);
     const student = students[random];
     student.className = 'student is-raising-hand';
     const answerText = scene.answerText;
-    let answer = "aa";
-    for (let i = 0; i < answerText.length; i++) {
-        if (id === answerText[i].id) {
-            answer = answerText[i].text;
-            break;
-        }
-
-    }
     student.onclick = () => {
         // console.log(answer);
         // get coordinates of top right corner of student
-        displayAnswer(student.id, answer);
+        displayAnswer(student.id, answerText);
         // allStudentsSitDown();
         showResponsesMultiple(scene);
     }

@@ -12,6 +12,124 @@
                 "student_reply" : " Good morning sir/ma'am"
             },
             {
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Everyone silent! Now tell me what is force?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Can anyone explain what is force?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Can any two students volunteer to come here in front of the class and perform this activity to explain force?",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Everyone read the page number 18 in the book. Now tell me what is force?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "So today I will narrate a story. After that I will ask you someone to explain me what is force.",
+                        "marks" : 3
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "I feel force is an external agent that can change the state of rest or motion of a particular body.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer. Very bad.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "No, the answer is incorrect. But good try.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Partially correct. I feel you could have phrased the answer better.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Yes, correct.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent! Thats the correct answer. Force is an influence that can change the motion of an object.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "How to change a moving ball?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Can anyone explain how can you change the direction of a moving ball?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Now imagine you are playing cricket and the ball is coming towards you. In order to make the ball move in the opposite direction, you need to change the direction of the ball. How can you do that?",
+                        "marks" : 3
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "In order to change the direction of an object possessing mass which is in the state of motion. What kind of external agent are we supposed to apply to overcome the inertia of the object?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Can any two students volunteer to come here in front of the class and perform this activity to explain the motion of a ball?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "incorrect",
+                "answerText" : "I feel we should not do anything to change the direction of a moving object.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer. Very bad.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "No, the answer is incorrect. Try to imagine a scenario where you want to change the direction of a cricket ball.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Why do you feel so? Perhaps you can explain your thinking and I can correct where you went wrong.",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Yes, correct.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent! Thats the correct answer. You dont need to do anything to change the direction of a moving object.",
+                        "marks" : 0
+                    }
+                ]
+            },
+            {
                 "type" : "lesson-question",
                 "options" : [
                     {
@@ -329,9 +447,14 @@
                     {
                         "id" : 4,
                         "text" : "Force",
-                        "response" : "Yes, a push or a pull on an object is called Force. So today we will learn about force."
+                        "response" : "Yes, a push or a pull on an object is called Force.So today we will learn about force."
                     }
                 ]
+            },
+            {
+                "type" : "greeting",
+                "greeting_text" : "Thats all for today. We will see you tomorrow. Read the first 5 pages of the book for the next lesson.",
+                "student_reply" : "Okay, Thank you ma'am"
             }
         ]
     }

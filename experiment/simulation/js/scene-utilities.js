@@ -1,6 +1,6 @@
 import { info, stagewiseMarks} from "./main.js";
 import { allStudentsSitDown } from "./students.js";
-import { renderGreeting, renderQuestion, renderLessonQuestion, renderTeacherDialog } from "./render.js";
+import { renderGreeting, renderEvaluationQuestion, renderLessonQuestion, renderTeacherDialog } from "./render.js";
 import { showStage, setCurrentStage } from "./timeline.js";
 
 // Scene Utilities
@@ -74,8 +74,8 @@ export const startSimulation = (story) => {
     const scene = story[window.currentScene];
     // make all students sit down
     allStudentsSitDown();
-    if (scene.type === 'question') {
-        renderQuestion(scene);
+    if (scene.type === 'evaluation-question') {
+        renderEvaluationQuestion(scene);
     }
     else if (scene.type === 'greeting') {
         renderGreeting(scene);
@@ -109,8 +109,8 @@ export const moveToStage = (stage) => {
         setCurrentStage(stage);
         // make all students sit down
         allStudentsSitDown();
-        if (scene.type === 'question') {
-            renderQuestion(scene);
+        if (scene.type === 'evaluation-question') {
+            renderEvaluationQuestion(scene);
         }
         else if(scene.type === 'greeting'){
             renderGreeting(scene);

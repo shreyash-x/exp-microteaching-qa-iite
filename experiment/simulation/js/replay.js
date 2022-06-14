@@ -42,7 +42,7 @@ const makeReplay = () => {
     const story = info;
     for(let i = 0; i < story.length; i++) {
         if(story[i].type === 'question') {
-            replay.push(renderQuestion,selectOption,askAnswer,showResponses,selectResponse,nextScene);
+            replay.push(renderEvaluationQuestion,selectOption,askAnswer,showResponses,selectResponse,nextScene);
         }
     }
 
@@ -83,7 +83,7 @@ document.getElementById('next-button').addEventListener('click', () => {
     
 
 
-const renderQuestion = () => {
+const renderEvaluationQuestion = () => {
     setCurrentStage(window.currentScene);
     const scene = info[window.currentScene];
     const teachersBox = document.getElementById('teachers-box');

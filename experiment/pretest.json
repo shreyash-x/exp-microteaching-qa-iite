@@ -2,35 +2,35 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What are the best ways for gaining attention and arousing motivation of the student? <ol><li>Using voice modulation and eye contact</li><li>Keeping a strict discipline expression on the face</li><li>Introducing an activity or a demonstration</li><li>Narrating a story or doing role play</li><li>Distributing pictures and asking students to study on their own</li></ol>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1 and 2",
+        "b": "1 and 4",
+        "c": "2, 3 and 4",
+        "d": "1, 3 and 4"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following are among the steps for structuring the set induction? <ol><li>The session starts with stating the purpose and not telling the title to be taught.</li><li>The teacher writes the title on the board at the start of session.</li><li>The teachers asks a series of questions in logical sequence during set induction by questioning.</li><li>The main objective of set induction is to draw the title from the students using previous knowledge.</li><li>Teacher can exceed the given time limit of 3.7 minutes.</li></ol>",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1 and 2",
+        "b": "1 and 4",
+        "c": "1, 3 and 4",
+        "d": "2 and 3"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"

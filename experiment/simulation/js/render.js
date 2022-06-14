@@ -2,8 +2,8 @@ import { allStudentsReply, askAnswerMultiple } from "./students.js";
 
 // Render scenes
 const nextButton = document.getElementById('next-button');
-// 1. Question
-export const renderQuestion = (scene) => {
+// 1. Evaluation Question
+export const renderEvaluationQuestion = (scene) => {
     const teachersBox = document.getElementById('teachers-box');
     teachersBox.innerHTML = '';
     scene.options.forEach(option => {
