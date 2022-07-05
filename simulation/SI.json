@@ -1,0 +1,481 @@
+{
+    "data" : {
+        "title" : "Set Induction Skill",
+        "target_audience" : "STD 8",
+        "subject" : "Science", 
+        "topic" : "Force",
+        "prerequisites" : [
+            "Describe an atom as an electrically neutral entity making up of a positively charged nucleus (protons and neutrons) with negatively charged electrons moving round the nucleus",
+            "Describe that a charged ion is formed when an atom gains or loses electron(s)"
+        ],
+        "learning_resources": ["Plastic Ruler", "Pieces of Paper", "Long Balloons"],
+        "stages": {
+            "greeting" : {
+                "stage_no" : 0,
+                "sub_stages" : 1
+            },
+            "lesson-question": {
+                "stage_no" : 1,
+                "sub_stages" : 4
+            },
+            "evaluation-question": {
+                "stage_no" : 2,
+                "sub_stages" : 5
+            }
+        },
+        "max_marks": {
+            "greeting": 0,
+            "lesson-question": 0,
+            "evaluation-question": 20
+        },
+        "story" : [
+            {
+                "stage_no" : 0,
+                "type" : "greeting",
+                "greeting_text" : "Hello, Good morning Students",
+                "student_reply" : " Good morning sir/ma'am"
+            },
+            {
+                "stage_no" : 1,
+                "type" : "teacher-dialog",
+                "text" : "Today we are going to perform a small experiment. I have named it as 'Make your own magic'. Two students come here and take this balloon, inflate and rub it on your partners head."
+            },
+            {
+                "stage_no" : 1,
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What do you observe?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "The hair of the boy is rising up",
+                        "response" : "Good."
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Throw it",
+                        "response" : "Correct Answer"
+                    }
+                ]
+            },
+            {
+                "stage_no" : 1,
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What do you think is the reason for this?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "There might be some force acting on the hair.",
+                        "response" : "Exactly."
+                    }
+                ]
+            },
+            {
+                "stage_no" : 1,
+                "type" : "teacher-dialog",
+                "text" : "Now, take this ruler, rub it on your head and put it on the bits of paper."
+            },
+            {
+                "stage_no" : 1,
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What do you observe?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "The bits are rising",
+                        "response" : "Yes, that's right."
+                    }
+                ]
+            },
+            {
+                "stage_no" : 1,
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What do you think is the reason for this?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "There might be some force acting on the bits of paper.",
+                        "response" : "Excellent."
+                    }
+                ]
+            },
+            {
+                "stage_no" : 1,
+                "type" : "teacher-dialog",
+                "text" : "So students today we are going to learn about 'Static Force'. Some real life example of this force is thunderstorm clouds."
+            },
+            {
+                "stage_no" : 2,
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Every one silent! Now you need to tell me what we are going to do?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Can anyone tell me which experiment we are going to perform today?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Ok now stop shouting and making noise and tell me the name of experiment that we will do?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Answer my question and do not make noise or I will send you out of the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "What is the name of the experiment that we have conducted today?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "The name of the experiment is 'Make your own magic'.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer you should listen carefully.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "The answer is wrong; you were not paying attention in the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "The answer is partially correct you should make more efforts. ",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "You are not completely right make more efforts.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent that is the correct answer. The name of the experiment that we are going to perform today is, 'Make your own magic'",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Yes, that is the correct answer.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "stage_no" : 2,
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "No noise in the class. Tell me the material I need?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Class stop shouting and making noise and tell me the material that we will need to complete the experiment?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Can anyone tell the tell the names of items that we are going to use today?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Who will list out the items needed today?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "What are items required for performing the experiment 'Make your own magic'?",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Raman, will you tell the class the names of items that we will need to perform the experiment?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "You bought a balloon, ruler and bits of paper for us all to perform a small experiment named, 'Make your own magic'.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer you should listen carefully.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "The answer is wrong; you were not paying attention in the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "The answer is correct but incomplete.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "The answer is partially correct we need bits of paper also along with balloon and ruler.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent that is the correct answer. today we need balloon, ruler and bits of paper to perform experiment",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Yes, today we will perform an interesting experiment with balloon, ruler and bits of paper.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "stage_no" : 2,
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "No noise class, tell me what we will do now?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Class stop shouting and making noise and tell me the next step?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Ok students; now think what we will do with balloon?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Now think; what we will do with balloon and bits of paper?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "What is the use of balloon in this experiment?",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "What is the use of balloon and what do you observe after doing the experiment?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "Two students will form a group. One student will inflate the balloon and rub it on the head of his/her partner. Observe that the hair of your partner rises up.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer you should listen carefully.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "The answer is wrong; you were not paying attention in the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Yes, the answer is right.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Right we will inflate the balloon.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent we will inflate the balloon and rub on the head of the partner to observe what happens.",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Right answer. It is observed that the hair of the person rises up on rubbing the balloon.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "stage_no" : 2,
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Keep quiet. Tell me, what we will do now?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Class stop shouting and making noise and tell me the next step?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Ok students; what will you observe with ruler and bits of paper?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Now think; what we will do with balloon and bits of paper?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "What will happen when the ruler rubbed with hair is kept above bits of paper?",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "What do you observe when you keep a ruler rubbed on your head above the bits of paper?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "The bits of paper rises up towards the ruler and some stick to it.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer you should listen carefully.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "The answer is wrong; you were not paying attention in the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Yes, the answer is right.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Right the bits of paper will rise up.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent when you keep the ruler rubbed on your head above the bits of paper they rise up and stick to the ruler.",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Right answer. It is observed that the bits of paper rises up and stick on the ruler.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "stage_no" : 2,
+                "type" : "evaluation-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Keep quiet. Tell me, what did we learn today?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Class stop shouting and making noise and tell me what did we learn today?",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Ok students; what did we learn today?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "What is the name of the force we learnt today?",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "What is the name given to the force acting on the hair of the person?",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "What is the name of the force that acted on hair and the ruler?",
+                        "marks" : 2
+                    }
+                ],
+                "answer" : "correct",
+                "answerText" : "The name of the force acting on the hair and the ruler is the static force.",
+                "responses" : [
+                    {
+                        "id" : 1,
+                        "text" : "No, wrong answer you should listen carefully.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "The answer is wrong; you were not paying attention in the class.",
+                        "marks" : 0
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Yes, the answer is right.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Correct, Static Force.",
+                        "marks" : 1
+                    },
+                    {
+                        "id" : 5,
+                        "text" : "Excellent the force acting on the hair and ruler is called static force.",
+                        "marks" : 2
+                    },
+                    {
+                        "id" : 6,
+                        "text" : "Right answer. The force that is produced due to rubbing of two objects is called static force.",
+                        "marks" : 2
+                    }
+                ]
+            },
+            {
+                "stage_no" : 2,
+                "type" : "greeting",
+                "greeting_text" : "Thats all for today. I will see you all tomorrow for another interesting topic. Thank you for your time.",
+                "student_reply" : "Okay, Thank you ma'am"
+            }
+        ]
+    }
+}
+
+

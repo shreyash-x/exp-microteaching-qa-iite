@@ -1,0 +1,340 @@
+{
+    "data" : {
+        "title" : "Set Induction Skill",
+        "target_audience" : "STD 8",
+        "subject" : "Science", 
+        "topic" : "Force",
+        "num_stages" : 14,
+        "story" : [
+            {
+                "type" : "greeting",
+                "greeting_text" : "Hello, Good morning Students",
+                "student_reply" : " Good morning sir/ma'am"
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Students, What do you need to do to make a football roll ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Kick it in particular direction",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Throw it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Push it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Don't do anything to it",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "If a football is currently rolling, what will you observe after some time ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "It will go with a constant speed",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "It will encounter a change in speed",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "It will change its speed and instantly stop",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Its speed will decrease slowly and eventually stop",
+                        "response" : "Correct Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "teacher-dialogue",
+                "text" : "When a ball is rolling, after some time you will observe that the speed of the football on the ground decreases slowly as it moves forward and it eventually stops at some point."
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What should you do to move a book placed on a table ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Push it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Pull it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Lift it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "We can push, pull as well as lift it",
+                        "response" : "Correct Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What should you in order to open or shut the door ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Push it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Pull it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "We can either push or pull it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "We don't need to do anything to it",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What should we do to open a drawer ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Push it",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Pull it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Lift it",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Throw it",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "What do you do with the fooball while taking a penalty shot ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Lift it",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Pull it",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Kick it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "We don't need to do anything to it",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "So now you have observed many different kind of actions. Can you name some of them ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Pushing",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Pulling",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Lifting",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Kicking",
+                        "response" : "Correct Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Now in all these actions, what do you observe ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "An object can change its speed and direction without any action.",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "An action must be applied on an object in order to move it.",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "An object can change its speed and direction if a particular action is applied on it.",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "We cant apply any action on an object.",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "teacher-dialogue",
+                "text" : "We can say that some action is always required to perform work."
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Do you think when some action is applied on a particular object, it changes its position ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Yes they do",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "No they don't",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Its position may not always change",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Its position will always change",
+                        "response" : "Incorrect Answer"
+                    }
+                ]
+            },
+            {
+                "type" : "teacher-dialogue",
+                "text" : "In order to move an object which isn't moving, it is necessary to apply an action on it. For objects which are already moving, we can apply action in order to change their speed and direction as well as stop them. The object can be anything, a book,ball,door,bench,etc."
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "In Science, what is a push or a pull on an object in order to move it called ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Pressure",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Rotation",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Motion",
+                        "response" : "Incorrect Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Force",
+                        "response" : "Yes, a push or a pull on an object is called Force. So today we will learn about force."
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
