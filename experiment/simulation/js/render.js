@@ -20,7 +20,7 @@ export const renderGreeting = (scene) => {
     teachersBox.innerHTML = messageBox;
     setTimeout(() => {
         allStudentsReply(scene.student_reply);
-        nextButton.removeAttribute('hidden');
+        nextButton.classList.remove('hidden');
     }, 2000);
 }
 // 3. Lesson Question
@@ -36,7 +36,7 @@ export const renderTeacherDialog = (scene) => {
     const messageBox = `<div class="message-box arrow-bottom">${scene.text}</div>`;
     teachersBox.innerHTML = messageBox;
     setTimeout(() => {
-        nextButton.removeAttribute('hidden');
+        nextButton.classList.remove('hidden');
     }, 2000);
     
 }

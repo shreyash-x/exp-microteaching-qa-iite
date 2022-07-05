@@ -14,7 +14,7 @@ let max_marks = {}
 const nextButton = document.getElementById('next-button');
 nextButton.addEventListener('click', () => {
     nextScene();
-    nextButton.setAttribute('hidden', 'hidden');
+    nextButton.classList.add('hidden');
 });
 
 // 1. Insert dialog cloud

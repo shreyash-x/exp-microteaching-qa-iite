@@ -212,14 +212,19 @@ text {
 
 .next-stage {
   position: absolute;
-  top: 0;
-  right: 0;
+  right: 15px;
+  bottom: 30%;
 }
 
 .next-button {
   margin: 15px 7px;
   background-color: #97d23d;
   color: #fff;
+}
+
+.next-button img {
+  width: 20px;
+  height: 20px;
 }
 
 .next-button:hover {
@@ -271,4 +276,8 @@ text {
 .topic-text {
   padding-top: 3px;
   font-size: 1.2rem;
+}
+
+.hidden {
+  display: none !important;
 }

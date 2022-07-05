@@ -24,7 +24,7 @@ const selectResponse = (event) => {
     addMessageBox(text);
     evaluateOption(id, scene.responses);
     allStudentsSitDown();
-    nextButton.removeAttribute('hidden');
+    nextButton.classList.remove('hidden');
 }
 
 // 3. Display options in teachers box
@@ -43,7 +43,7 @@ export const showResponsesMultiple = (scene) => {
 export const displayTeacherMessage = (response) => {
     addMessageBox(response);
     if (checkIfAllStudentsSitting()) {
-        nextButton.removeAttribute('hidden');
+        nextButton.classList.remove('hidden');
     }
 }
 
