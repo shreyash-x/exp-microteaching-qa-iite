@@ -15,7 +15,7 @@
     <div id="classroom" class="scene">
         <div id="progress-bar" class="is-flex is-justify-content-center is-align-content-center pt-2">
         </div>
-        <div class="seats is-flex is-flex-direction-row is-justify-content-space-between">
+        <div class="seats is-flex is-flex-direction-row is-justify-content-space-between mt-4">
             <div id="student-1" class="student "></div>
             <div id="student-2" class="student "></div>
             <div id="student-3" class="student "></div>
@@ -36,36 +36,56 @@
 
     <div class="modal show-modal">
         <div class="modal-content">
-            <div class="container intro-content">
+            <div id="dialog-box" class="container intro-content">
                 <div class="columns is-centered is-mobile">
-                    <div class="column is-1 topic-title">Skill: </div>
-                    <div class="column">
-                        <div id="title" class="topic-text">
-                            
+                    <div class="column is-6">
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Skill: </div>
+                            <div class="column">
+                                <div id="title" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Class: </div>
+                            <div class="column">
+                                <div id="audience" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Subject: </div>
+                            <div class="column">
+                                <div id="subject" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Topic: </div>
+                            <div class="column">
+                                <div id="topic" class="topic-text">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="columns is-centered is-mobile">
-                    <div class="column is-1 topic-title">Class: </div>
-                    <div class="column">
-                        <div id="audience" class="topic-text">
-                            
+                    <div class="column is-6">
+                        <div class="columns is-mobile">
+                            <div class="topic-title">Prerequisites: </div>
                         </div>
-                    </div>
-                </div>
-                <div class="columns is-centered is-mobile">
-                    <div class="column is-1 topic-title">Subject: </div>
-                    <div class="column">
-                        <div id="subject" class="topic-text">
-                            
+                        <div class="columns is-mobile">
+                            <div class="topic-text">Before the lesson student should be able to:
+                                <ol id="prerequisites"></ol>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="columns is-centered is-mobile">
-                    <div class="column is-1 topic-title">Topic: </div>
-                    <div class="column">
-                        <div id="topic" class="topic-text">
-                            
+                        <div class="columns is-mobile">
+                            <div class="topic-title mt-5">Learning Resources: </div>
+                        </div>
+                        <div class="columns is-mobile">
+                            <div id="resources" class="topic-text"></div>
                         </div>
                     </div>
                 </div>

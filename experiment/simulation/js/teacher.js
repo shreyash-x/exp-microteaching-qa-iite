@@ -32,19 +32,48 @@ export const showResponsesMultiple = (scene) => {
     const teachersBox = document.getElementById('teachers-box');
     clearTeachersBox();
     scene.responses.forEach(response => {
-        const question = `<div id="option-${response.id}" class="option-card" onclick="selectResponse(event)">${response.text}</div>`;
+        const question = `<div id="option-${response.id}" class="option-card grow" onclick="selectResponse(event)">${response.text}</div>`;
         teachersBox.innerHTML += question;
         // console.log(el);
     });
+    handleOptionCards();
 }
 
 // 4. Display single message/option in teachers box
 export const displayTeacherMessage = (response) => {
     addMessageBox(response);
-    if(checkIfAllStudentsSitting()){
+    if (checkIfAllStudentsSitting()) {
         nextButton.removeAttribute('hidden');
     }
 }
+
+export const handleOptionCards = () => {
+    const options = document.getElementsByClassName('option-card');
+    for (let i = 0; i < options.length; i++) {
+        options[i].addEventListener('mouseover', () => {
+            if(document.getElementsByClassName('big-option-card').length !== 0) {
+                return;
+            }
+            // for (let j = 0; j < options.length; j++) {
+            //     if (j !== i) {
+            //         options[j].setAttribute('hidden', 'hidden');
+            //     }
+            // }
+            options[i].className = 'big-option-card';
+
+            const bigBox = document.getElementsByClassName('big-option-card')[0];
+            bigBox.addEventListener('mouseout', () => {
+                for (let j = 0; j < options.length; j++) {
+                    options[j].removeAttribute('hidden');
+                }
+                bigBox.className = 'option-card';
+            });
+        });
+    }
+}
+
+
+
 
 window.selectResponse = selectResponse;
 window.selectOption = selectOption;

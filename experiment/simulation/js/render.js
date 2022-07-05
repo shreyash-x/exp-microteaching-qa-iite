@@ -1,4 +1,5 @@
 import { allStudentsReply, askAnswerMultiple } from "./students.js";
+import { handleOptionCards } from "./teacher.js";
 
 // Render scenes
 const nextButton = document.getElementById('next-button');
@@ -10,6 +11,7 @@ export const renderEvaluationQuestion = (scene) => {
         const question = `<div id="option-${option.id}" class="option-card" onclick="selectOption(event)">${option.text}</div>`;
         teachersBox.innerHTML += question;
     });
+    handleOptionCards();
 }
 // 2. Greeting
 export const renderGreeting = (scene) => {

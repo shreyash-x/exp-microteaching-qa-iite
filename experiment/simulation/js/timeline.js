@@ -3,19 +3,22 @@ import { allStudentsSitDown } from "./students.js";
 
 // Timeline
 // 1. Create Timeline
-export const createTimeline = (num_stages) => {
+export const createTimeline = (num_stages,stages) => {
     const progressBar = document.getElementById('progress-bar');
+    const stageNames = Object.keys(stages);
     progressBar.innerHTML = '';
     for (let i = 1; i < num_stages; i++) {
         const element = `<div id="stage-${i}" class="stage is-flex is-flex-direction-row">
                             <div class="timeline-stage has-text-centered mt-2">S${i}</div>
                             <hr class="progress-bar-line">
+                            <span class="stage-progress">0/${stages[stageNames[i-1]]["sub_stages"]}</span>
                         </div>`
         progressBar.innerHTML += element;
     }
     // for final stage
     const element = `<div id="stage-${num_stages}" class="stage is-flex is-flex-direction-row final-stage">
                         <div class="timeline-stage has-text-centered mt-2">S${num_stages}</div>
+                        <span class="stage-progress">0/${stages[stageNames[num_stages-1]]["sub_stages"]}</span>
                     </div>`
     progressBar.innerHTML += element;
 }
@@ -74,8 +77,8 @@ export const handleStages = () => {
 }
 
 // 3. Initialize timeline
-export const showStage = () => {
-    const stage = document.getElementById(`stage-${window.currentScene}`);
+export const showStage = (stage_num) => {
+    const stage = document.getElementById(`stage-${stage_num}`);
     const children = stage.children;
     for (let i = 0; i < children.length; i++) {
         const child = children[i];
@@ -94,4 +97,12 @@ export const setCurrentStage = (stage) => {
     if (!el.classList.contains('is-in-progress')) {
         el.classList.add('is-in-progress');
     }
+}
+
+export const updateStageProgress = (stage) => {
+    const el = document.getElementById(`stage-${stage}`).getElementsByClassName('stage-progress')[0];
+    const progress = el.innerHTML;
+    const cur_prog = progress.split('/')[0];
+    const total_prog = progress.split('/')[1];
+    el.innerHTML = `${parseInt(cur_prog)+1}/${total_prog}`;
 }

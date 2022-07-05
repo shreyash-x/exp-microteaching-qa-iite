@@ -7,42 +7,6 @@
         "num_stages" : 6,
         "story" : [
             {
-                "type" : "greeting",
-                "greeting_text" : "Hello, Good morning Students",
-                "student_reply" : " Good morning sir/ma'am"
-            },
-            {
-                "type" : "lesson-question",
-                "options" : [
-                    {
-                        "id" : 1,
-                        "text" : "Students, What do you need to do to make a football roll ?"
-                    }
-                ],
-                "answers" : [
-                    {
-                        "id" : 1,
-                        "text" : "Kick it in particular direction",
-                        "response" : "Correct Answer"
-                    },
-                    {
-                        "id" : 2,
-                        "text" : "Throw it",
-                        "response" : "Correct Answer"
-                    },
-                    {
-                        "id" : 3,
-                        "text" : "Push it",
-                        "response" : "Correct Answer"
-                    },
-                    {
-                        "id" : 4,
-                        "text" : "Don't do anything to it",
-                        "response" : "Incorrect Answer"
-                    }
-                ]
-            },
-            {
                 "type" : "evaluation-question",
                 "options" : [
                     {
@@ -98,6 +62,42 @@
                         "id" : 5,
                         "text" : "Excellent! Thats the correct answer. Force is an influence that can change the motion of an object.",
                         "marks" : 2
+                    }
+                ]
+            },
+            {
+                "type" : "greeting",
+                "greeting_text" : "Hello, Good morning Students",
+                "student_reply" : " Good morning sir/ma'am"
+            },
+            {
+                "type" : "lesson-question",
+                "options" : [
+                    {
+                        "id" : 1,
+                        "text" : "Students, What do you need to do to make a football roll ?"
+                    }
+                ],
+                "answers" : [
+                    {
+                        "id" : 1,
+                        "text" : "Kick it in particular direction",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 2,
+                        "text" : "Throw it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 3,
+                        "text" : "Push it",
+                        "response" : "Correct Answer"
+                    },
+                    {
+                        "id" : 4,
+                        "text" : "Don't do anything to it",
+                        "response" : "Incorrect Answer"
                     }
                 ]
             },
