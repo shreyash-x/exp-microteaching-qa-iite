@@ -6,7 +6,7 @@
 <b> Lab | <b> Fill your lab name here
 <b> Experiment|     <b> Fill your experiment name and number here
 
-### About the Experiment 
+### About the Experiment.
 
 Fill a brief description of this experiment here
 
