@@ -1,0 +1,16 @@
+
+/home/runner/work/exp-microteaching-qa-iite/exp-microteaching-qa-iite/experiment/simulation/js/main.js
+  7:5  warning  'replayJSON' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-microteaching-qa-iite/exp-microteaching-qa-iite/experiment/simulation/js/replay.js
+   26:11  warning  'story' is assigned a value but never used        no-unused-vars
+   29:5   warning  'createTimeline' is not defined                   no-undef
+  247:7   warning  'moveToStage' is assigned a value but never used  no-unused-vars
+  247:22  warning  'stage' is defined but never used                 no-unused-vars
+
+/home/runner/work/exp-microteaching-qa-iite/exp-microteaching-qa-iite/experiment/simulation/js/scene-utilities.js
+   80:11  warning  'cur_type' is assigned a value but never used     no-unused-vars
+  211:10  warning  'downloadObjectAsJson' is defined but never used  no-unused-vars
+
+✖ 7 problems (0 errors, 7 warnings)
+

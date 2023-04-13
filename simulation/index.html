@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microteaching</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.7-b/css/style.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div id="classroom" class="scene">
+        <div id="progress-bar" class="is-flex is-justify-content-center is-align-content-center pt-2">
+        </div>
+        <div class="seats is-flex is-flex-direction-row is-justify-content-space-between mt-4">
+            <div id="student-1" class="student "></div>
+            <div id="student-2" class="student "></div>
+            <div id="student-3" class="student "></div>
+            <div id="student-4" class="student "></div>
+        </div>
+        <div class="seats is-flex is-flex-direction-row is-justify-content-space-around">
+            <div id="student-5" class="student "></div>
+            <div id="student-6" class="student "></div>
+            <div id="student-7" class="student "></div>
+        </div>
+        <button id="next-button" class="v-button next-button next-stage is-flex is-align-items-center is-justify-content-center hidden" ><span class="mr-3">Next </span><img src="images/next.png" alt="next"></button>
+        <div id="teachers-box" class="menu is-flex is-flex-direction-row is-justify-content-space-between">
+        </div>
+
+        
+
+    </div>
+
+    <div class="modal show-modal">
+        <div class="modal-content">
+            <div id="dialog-box" class="container intro-content">
+                <div class="columns is-centered is-mobile">
+                    <div class="column is-6">
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Skill: </div>
+                            <div class="column">
+                                <div id="title" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Class: </div>
+                            <div class="column">
+                                <div id="audience" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Subject: </div>
+                            <div class="column">
+                                <div id="subject" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns is-centered is-mobile">
+                            <div class="column is-2 topic-title">Topic: </div>
+                            <div class="column">
+                                <div id="topic" class="topic-text">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="columns is-mobile">
+                            <div class="topic-title">Prerequisites: </div>
+                        </div>
+                        <div class="columns is-mobile">
+                            <div class="topic-text">Before the lesson student should be able to:
+                                <ol id="prerequisites"></ol>
+                            </div>
+                        </div>
+                        <div class="columns is-mobile">
+                            <div class="topic-title mt-5">Learning Resources: </div>
+                        </div>
+                        <div class="columns is-mobile">
+                            <div id="resources" class="topic-text"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered is-mobile">
+                    <div class="column mt-6">
+                        <button class="is-pulled-left v-button next-button" id="startexp">Lets Begin!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="js/main.js"></script>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+</html>
